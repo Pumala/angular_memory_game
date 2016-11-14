@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <script src="angular.js">  </script>
+    <script src="memorygame.js"></script>
+  </head>
+  <body>
+
+    <div class="container" ng-app='my-app' ng-controller="MemoryController">
+
+      <div id="message-div">
+        <h2 ng-model="message" id="message">Moves: {{deck.moves}} matches: {{deck.matches}}</h2>
+        <h2 id="winBanner" ng-show="deck.won">You won in {{deck.moves}} moves!</h2>
+      </div>
+
+      <div class="levels">
+        <p>
+          Choose a level:
+        </p>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(8)" name="button">Easy</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(14)" name="button">Normal</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(20)" name="button">Pro</button>
+      </div>
+
+      <div class="cards clear">
+        <div ng-repeat="card in deck.currentCards" ng-click="revealCard(card)" ng-class="{open: card.open}" class="card">
+          <div class="front">
+            <img class="monster" src="{{card.url}}" alt=""  />
+          </div>
+          <div class="back">
+            <img class="logo" src="assets/logo.png"  alt=""  />
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end of container div -->
+
+  </body>
+</html>
