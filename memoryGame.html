@@ -13,7 +13,10 @@
     <div class="container" ng-app='my-app' ng-controller="MemoryController">
 
       <div id="message-div">
-        <h2 ng-model="message" id="message">Moves: {{deck.moves}} matches: {{deck.matches}}</h2>
+        <h2 ng-model="message" id="message">
+          <span>Moves: {{deck.moves}}</span>
+          <span>Matches: {{deck.matches}}</span>
+        </h2>
         <h2 id="winBanner" ng-show="deck.won">You won in {{deck.moves}} moves!</h2>
       </div>
 

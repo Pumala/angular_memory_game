@@ -110,4 +110,17 @@ p {
   transform: rotateY(0deg);
 }
 
-/*************************/
+/*************************************
+              MEDIA QUERIES
+*************************************/
+@media screen and (min-width: 600px) {
+  h2 span:first-child {
+    float: left;
+  }
+  h2 span:last-child {
+    float: right;
+  }
+  #message-div {
+    height: 40px;
+  }
+}
