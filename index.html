@@ -11,32 +11,31 @@
   <body>
 
     <div class="container" ng-app='my-app' ng-controller="MemoryController">
-      <div>
-        <div id="message-div">
-          <h2 ng-model="message" id="message">
-            <span>Moves: {{deck.moves}}</span>
-            <span>Matches: {{deck.matches}}</span>
-          </h2>
-          <h2 id="winBanner" ng-show="deck.won">You won in {{deck.moves}} moves!</h2>
-        </div>
 
-        <div class="levels">
-          <h3>
-            Choose a level:
-          </h3>
-          <button class="levelBtn" type="button" ng-click="deck.generateCards(8)" name="button">Easy</button>
-          <button class="levelBtn" type="button" ng-click="deck.generateCards(16)" name="button">Normal</button>
-          <button class="levelBtn" type="button" ng-click="deck.generateCards(24)" name="button">Pro</button>
-        </div>
+      <div id="message-div">
+        <h2 ng-model="message" id="message">
+          <span>Moves: {{deck.moves}}</span>
+          <span>Matches: {{deck.matches}}</span>
+        </h2>
+        <h2 id="winBanner" ng-show="deck.won">You won in {{deck.moves}} moves!</h2>
+      </div>
+
+      <div class="levels">
+        <p>
+          Choose a level:
+        </p>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(8)" name="button">Easy</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(16)" name="button">Normal</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(24)" name="button">Pro</button>
       </div>
 
       <div class="cards clear">
-        <div ng-repeat="card in deck.currentCards" ng-click="revealCard(card)" ng-class="{open: card.open, fourth: deck.currentCards.length === 8 || deck.currentCards.length === 16, sixth: deck.currentCards.length === 24}" class="card">
+        <div ng-repeat="card in deck.currentCards" ng-click="revealCard(card)" ng-class="{open: card.open}" class="card">
           <div class="front">
             <img class="monster" src="{{card.url}}" alt=""  />
           </div>
           <div class="back">
-            <img class="logo" src="assets/pokemon_back_image.png"  alt=""  />
+            <img class="logo" src="assets/logo.png"  alt=""  />
           </div>
         </div>
       </div>
