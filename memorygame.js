@@ -102,19 +102,32 @@ Deck.prototype.generateCards = function(numCards) {
   this.matches = 0;
   this.won = false;
 
+  // here we have a nested for loop inside another for loop
+  // the outer for loop runs twice, meaning that the nest array will happen twice
   for(var j = 0; j < 2; j++) {
+    // the nested for loop runs through half the number of cards => numCards / 2
     for (var i = 1; i <= (numCards / 2); i++) {
+      // url is the image src => this value is dynamic because the value of i changes
       var url = "assets/pokemon" + i + ".png"
+      // we create a new instance of Card and add it to our array 'cards'
       cards.push(new Card(url, false, false));
     };
   }
+  // when the for loops have finished running, the card array contains an array of cards that each have a match
+  // for instance, if numCards = 8, then afterward each card gets a match, meaning there are 16 cards total now in the cards array
 
+  // save the length of the cards array
   var length = cards.length;
 
+  // the section below randomizes the cards and how they will be spread out on board
+  // check while the currentCards length is not the same as the original cards length
   while (this.currentCards.length != length) {
+    // find the random index
     var randomIndex = Math.floor(Math.random() * cards.length);
 
+    // push a random card onto current cards array
     this.currentCards.push(cards[randomIndex]);
+    // delete the card we just added to current cards from card array
     cards.splice(randomIndex, 1);
   }
 }
