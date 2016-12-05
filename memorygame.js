@@ -72,7 +72,7 @@ Deck.prototype.generateCards = function(numCards) {
 
   for(var j = 0; j < 2; j++) {
     for (var i = 1; i <= (numCards / 2); i++) {
-      var url = "assets/monsters-" + i + ".png"
+      var url = "assets/pokemon" + i + ".png"
       cards.push(new Card(url, false, false));
     };
   }

@@ -1,0 +1,12 @@
+<h1>Easy</h1>
+<p>{{deck.currentCards}}</p>
+<div class="cards clear">
+  <div ng-repeat="card in deck.currentCards" ng-click="revealCard(card)" ng-class="{open: card.open}" class="card">
+    <div class="front">
+      <img class="monster" src="{{card.url}}" alt=""  />
+    </div>
+    <div class="back">
+      <img class="logo" src="assets/pokemon_back_image.png"  alt=""  />
+    </div>
+  </div>
+</div>
