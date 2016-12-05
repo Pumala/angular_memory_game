@@ -8,6 +8,7 @@ body {
   /*background-image: url('assets/main_pokemon.png');*/
   /*background-repeat: no-repeat;*/
   height: 100%;
+  background-attachment: fixed;
   /*background-size: cover;*/
 }
 .container {
@@ -79,6 +80,9 @@ p {
 /*************************************
     CARD ANIMATIONS => FLIPPING
 *************************************/
+.cards {
+  margin-bottom: 20px;
+}
 .card {
   perspective: 2000px;
   position: relative;
