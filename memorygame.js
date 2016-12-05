@@ -10,6 +10,7 @@ app.controller('MemoryController', function($scope, $timeout) {
   $scope.deck.won = false;
 
   $scope.revealCard = function(card) {
+    console.log($scope.deck.currentCards.length);
     if ((card.matched === false) && ($scope.gameInPlay === true)) {
       if ($scope.firstState === true) {
         card.open = true;
