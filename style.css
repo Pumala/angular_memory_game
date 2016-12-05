@@ -154,6 +154,9 @@ p {
   .card .front, .card .back {
     height: 140px;
   }
+  /*.fourth .front, .fourth .back {
+    height: 160px;
+  }*/
 }
 @media screen and (min-width: 600px) {
   h2 span:first-child {
