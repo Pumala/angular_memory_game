@@ -24,9 +24,9 @@
         <h3>
           Choose a level:
         </h3>
-        <button class="levelBtn" type="button" ng-click="deck.generateCards(8)" name="button">Easy</button>
-        <button class="levelBtn" type="button" ng-click="deck.generateCards(16)" name="button">Normal</button>
-        <button class="levelBtn" type="button" ng-click="deck.generateCards(24)" name="button">Pro</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(8)" ng-class="{yellow: deck.currentCards.length === 8}" name="button">Easy</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(16)" ng-class="{yellow: deck.currentCards.length === 16}" name="button">Normal</button>
+        <button class="levelBtn" type="button" ng-click="deck.generateCards(24)" ng-class="{yellow: deck.currentCards.length === 24}" name="button">Pro</button>
       </div>
 
       <div class="cards clear">

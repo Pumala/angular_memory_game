@@ -74,7 +74,7 @@ p {
 .levelBtn:focus {
   outline: none;
 }
-.levelBtn:hover {
+.levelBtn:hover, .yellow {
   background: yellow;
   color: #000;
   transition: 0.3s;
@@ -165,6 +165,9 @@ p {
   }
   #message-div {
     height: 40px;
+  }
+  .levels h3 {
+    margin: 10px 0;
   }
   .cards .card {
     height: 150px;
