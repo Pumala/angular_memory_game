@@ -15,7 +15,9 @@ body {
   margin: auto;
   max-width: 600px;
 }
-
+.container.smallerWidth {
+  max-width: 500px;
+}
 .clear:before, .clear:after {
   content: "";
   display: table;
@@ -148,15 +150,11 @@ p {
 }
 @media screen and (min-width: 451px) {
   .cards .card {
-    /*width: 20%;*/
     height: 140px;
   }
   .card .front, .card .back {
     height: 140px;
   }
-  /*.fourth .front, .fourth .back {
-    height: 160px;
-  }*/
 }
 @media screen and (min-width: 600px) {
   h2 span:first-child {
@@ -169,7 +167,6 @@ p {
     height: 40px;
   }
   .cards .card {
-    /*width: 16.6666667%;*/
     height: 150px;
   }
   .card .front, .card .back {

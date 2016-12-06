@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <div class="container" ng-app='my-app' ng-controller="MemoryController">
+    <div class="container" ng-app='my-app' ng-controller="MemoryController" ng-class="{smallerWidth: deck.currentCards.length === 8 || deck.currentCards.length === 16}">
 
       <div id="message-div">
         <h2 ng-model="message" id="message">
