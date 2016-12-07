@@ -86,6 +86,7 @@ p {
   margin-bottom: 20px;
 }
 .card {
+  -webkit-perspective: 2000px;
   perspective: 2000px;
   position: relative;
   height: 100px;
@@ -112,32 +113,48 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
   border-radius: 5px;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
 }
 
 .card .front, .card .back {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: 0.6s;
   border-radius: 5px;
 }
 
 .card .front {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .card .back {
-  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+       -o-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 .card.open .back {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .card.open .front {
-  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+       -o-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 /*************************************
