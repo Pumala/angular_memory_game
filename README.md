@@ -5,7 +5,7 @@ create a memory game in AngularJS that offers different playing levels
 
 ### Live Demo:
 
-[Pokemon Memory Game] (http://iamclamclam.com/angular_memory_game/)
+[Pokemon Memory Game](http://iamclamclam.com/angular_memory_game/)
 
 ### Languages used:
 
